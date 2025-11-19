@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --purple-600: hsl(246, 80%, 60%);
+  --orange-300: hsl(15, 100%, 70%);
+  --blue-300: hsl(195, 74%, 62%);
+  --pink-400: hsl(348, 100%, 68%);
+  --green-400: hsl(145, 58%, 55%);
+  --purple-700: hsl(264, 64%, 52%);
+  --yellow-300: hsl(43, 84%, 65%);
+  --navy-950: hsl(226, 43%, 10%);
+  --navy-900: hsl(235, 46%, 20%);
+  --purple-500: hsl(235, 45%, 61%);
+  --navy-200: hsl(236, 100%, 87%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--navy-950);
+  color: white;
+  font-family: "Manrope";
+}
+
+article {
+  container-type: inline-size;
+  width: calc(15rem + 25vw);
+}
+
+#inner-article {
+  font-size: 5cqi;
+  display: grid;
+  gap: 1.5em;
+  grid-template-columns: 1fr;
+}
+
+section {
+  border-radius: 1em;
+  display: grid;
+}
+
+section#avatar {
+  background-color: var(--navy-900);
+  /* grid-template-areas: 
+    'jeremy'
+    'jeremy'
+    'time-frame'; */
+}
+
+#Jeremy {
+  background-color: var(--purple-600);
+  border-radius: inherit;
+  /* grid-area: jeremy; */
+  display: flex;
+  gap: 1em;
+  /* justify-content: space-around; */
+  align-items: center;
+  padding: 2em 2em;
+  padding-right: 0;
+}
+
+#Jeremy h2 {
+  font-size: 1.4em;
+  line-height: 1.2em;
+  font-weight: 400;
+  word-spacing: 0.15em;
+}
+
+.tiny {
+  font-size: 0.6em;
+  font-weight: 300;
+  word-spacing: 0.1em;
+  color: var(--navy-200);
+}
+
+#Jeremy::before {
+  content: "";
+  width: auto;
+  min-width: 4.25em;
+  aspect-ratio: 1;
+  background: url("images/image-jeremy.png") no-repeat center/contain;
+  border-radius: 50%;
+  border: 0.2em white solid;
+  margin-right: 0;
+}
+
+#time-frame {
+  display: flex;
+  justify-content: space-around;
+  /* grid-area: time-frame; */
+  padding: 1.25em 0;
+}
+
+.activity {
+    position: relative;
+    overflow: hidden;
+}
+
+#Work {
+  background-color: var(--orange-300);
+}
+
+#Work::after {
+    content: '';
+    width: 4.5em;
+    aspect-ratio: 1;
+    background: url(images/icon-work.svg) no-repeat center/contain;
+    position: absolute;
+    top: -7%;
+    right: 5%;
+}
+
+#Play {
+  background-color: var(--orange-300);
+}
+
+#Play::after {
+    content: '';
+    width: 4.5em;
+    aspect-ratio: 1;
+    background: url(images/icon-work.svg) no-repeat center/contain;
+    position: absolute;
+    top: -7%;
+    right: 5%;
+}
+
+#Study {
+  background-color: var(--orange-300);
+}
+
+#Study::after {
+    content: '';
+    width: 4.5em;
+    aspect-ratio: 1;
+    background: url(images/icon-work.svg) no-repeat center/contain;
+    position: absolute;
+    top: -7%;
+    right: 5%;
+}
+
+#Exercise {
+  background-color: var(--orange-300);
+}
+
+#Exercise::after {
+    content: '';
+    width: 4.5em;
+    aspect-ratio: 1;
+    background: url(images/icon-work.svg) no-repeat center/contain;
+    position: absolute;
+    top: -7%;
+    right: 5%;
+}
+
+#Social {
+  background-color: var(--orange-300);
+}
+
+#Social::after {
+    content: '';
+    width: 4.5em;
+    aspect-ratio: 1;
+    background: url(images/icon-work.svg) no-repeat center/contain;
+    position: absolute;
+    top: -7%;
+    right: 5%;
+}
+
+#Self-Care {
+  background-color: var(--orange-300);
+}
+
+#Self-Care::after {
+    content: '';
+    width: 4.5em;
+    aspect-ratio: 1;
+    background: url(images/icon-work.svg) no-repeat center/contain;
+    position: absolute;
+    top: -7%;
+    right: 5%;
+}
+
+.activity-data {
+  margin-top: 2em;
+  background-color: var(--navy-900);
+  border-radius: inherit;
+  padding: 1.5em 1.5em;
+  z-index: 1;
+}
+
+.activity-data .header,
+.activity-data .time > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.activity-data .time > div.hide {
+  display: none;
+}
+
+.activity-data .header::after {
+    content: '';
+    width: 1.5em;
+    aspect-ratio: 1;
+    background: url(images/icon-ellipsis.svg) no-repeat center/contain;
+}
+
+
+
