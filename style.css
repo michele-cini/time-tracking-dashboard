@@ -44,19 +44,13 @@ section {
 
 section#avatar {
   background-color: var(--navy-900);
-  /* grid-template-areas: 
-    'jeremy'
-    'jeremy'
-    'time-frame'; */
 }
 
 #Jeremy {
   background-color: var(--purple-600);
   border-radius: inherit;
-  /* grid-area: jeremy; */
   display: flex;
   gap: 1em;
-  /* justify-content: space-around; */
   align-items: center;
   padding: 2em 2em;
   padding-right: 0;
@@ -90,7 +84,6 @@ section#avatar {
 #time-frame {
   display: flex;
   justify-content: space-around;
-  /* grid-area: time-frame; */
   padding: 1.25em 0;
   color: var(--navy-200);
 }
@@ -100,8 +93,8 @@ section#avatar {
 }
 
 .activity {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 #Work {
@@ -109,13 +102,13 @@ section#avatar {
 }
 
 #Work::after {
-    content: '';
-    width: 4.5em;
-    aspect-ratio: 1;
-    background: url(images/icon-work.svg) no-repeat center/contain;
-    position: absolute;
-    top: -7%;
-    right: 5%;
+  content: "";
+  width: 4.5em;
+  aspect-ratio: 1;
+  background: url(images/icon-work.svg) no-repeat center/contain;
+  position: absolute;
+  top: -7%;
+  right: 5%;
 }
 
 #Play {
@@ -123,13 +116,13 @@ section#avatar {
 }
 
 #Play::after {
-    content: '';
-    width: 4.5em;
-    aspect-ratio: 1;
-    background: url(images/icon-play.svg) no-repeat center/contain;
-    position: absolute;
-    top: -7%;
-    right: 5%;
+  content: "";
+  width: 4.5em;
+  aspect-ratio: 1;
+  background: url(images/icon-play.svg) no-repeat center/contain;
+  position: absolute;
+  top: -7%;
+  right: 5%;
 }
 
 #Study {
@@ -137,13 +130,13 @@ section#avatar {
 }
 
 #Study::after {
-    content: '';
-    width: 4.5em;
-    aspect-ratio: 1;
-    background: url(images/icon-study.svg) no-repeat center/contain;
-    position: absolute;
-    top: -7%;
-    right: 5%;
+  content: "";
+  width: 4.5em;
+  aspect-ratio: 1;
+  background: url(images/icon-study.svg) no-repeat center/contain;
+  position: absolute;
+  top: -7%;
+  right: 5%;
 }
 
 #Exercise {
@@ -151,13 +144,13 @@ section#avatar {
 }
 
 #Exercise::after {
-    content: '';
-    width: 4.5em;
-    aspect-ratio: 1;
-    background: url(images/icon-exercise.svg) no-repeat center/contain;
-    position: absolute;
-    top: -7%;
-    right: 5%;
+  content: "";
+  width: 4.5em;
+  aspect-ratio: 1;
+  background: url(images/icon-exercise.svg) no-repeat center/contain;
+  position: absolute;
+  top: -7%;
+  right: 5%;
 }
 
 #Social {
@@ -165,13 +158,13 @@ section#avatar {
 }
 
 #Social::after {
-    content: '';
-    width: 4.5em;
-    aspect-ratio: 1;
-    background: url(images/icon-social.svg) no-repeat center/contain;
-    position: absolute;
-    top: -7%;
-    right: 5%;
+  content: "";
+  width: 4.5em;
+  aspect-ratio: 1;
+  background: url(images/icon-social.svg) no-repeat center/contain;
+  position: absolute;
+  top: -7%;
+  right: 5%;
 }
 
 #Self-Care {
@@ -179,13 +172,13 @@ section#avatar {
 }
 
 #Self-Care::after {
-    content: '';
-    width: 4.5em;
-    aspect-ratio: 1;
-    background: url(images/icon-self-care.svg) no-repeat center/contain;
-    position: absolute;
-    top: -7%;
-    right: 5%;
+  content: "";
+  width: 4.5em;
+  aspect-ratio: 1;
+  background: url(images/icon-self-care.svg) no-repeat center/contain;
+  position: absolute;
+  top: -7%;
+  right: 5%;
 }
 
 .activity-data {
@@ -204,15 +197,19 @@ section#avatar {
   position: relative;
 }
 
+.activity-data .time > div p {
+  color: var(--navy-200);
+}
+
 .activity-data .time > div.hide {
   display: none;
 }
 
 .activity-data .header::after {
-    content: '';
-    width: 1.5em;
-    aspect-ratio: 1;
-    background: url(images/icon-ellipsis.svg) no-repeat center/contain;
+  content: "";
+  width: 1.5em;
+  aspect-ratio: 1;
+  background: url(images/icon-ellipsis.svg) no-repeat center/contain;
 }
 
 @media screen and (min-width: 64em) {
@@ -221,40 +218,73 @@ section#avatar {
   }
 
   #inner-article {
-    font-size: 1.75cqi;
+    font-size: 1.5cqi;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
-    'avatar work play study'
-    'avatar exercise social self-care';
+      "avatar work play study"
+      "avatar exercise social self-care";
   }
 
   #Jeremy {
-  display: flex;
-  flex-direction: column;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #Jeremy h2 {
+    font-size: 2.25em;
+    margin-bottom: 1.5em;
+  }
+
+  #Jeremy h2 span {
+    font-size: 0.4em;
+    display: inline-block;
+    margin-bottom: -0.75em;
+  }
 
   #time-frame {
     flex-direction: column;
+    gap: 1em;
+    padding-left: 2em;
   }
 
-  #avatar {grid-area: avatar}
+  #avatar {
+    grid-area: avatar;
+  }
 
-  #Work {grid-area: work}
+  #Work {
+    grid-area: work;
+  }
 
-  #Play {grid-area: play}
+  #Play {
+    grid-area: play;
+  }
 
-  #Study {grid-area: study}
+  #Study {
+    grid-area: study;
+  }
 
-  #Exercise {grid-area: exercise}
+  #Exercise {
+    grid-area: exercise;
+  }
 
-  #Social {grid-area: social}
+  #Social {
+    grid-area: social;
+  }
 
-  #Self-Care {grid-area: self-care}
+  #Self-Care {
+    grid-area: self-care;
+  }
 
   .activity-data .time > div {
     flex-direction: column;
-}
-}
+    align-items: flex-start;
+  }
 
-
+  .activity-data .time > div h2 {
+    font-size: 3em;
+    font-weight: 300;
+    margin-bottom: 0.25em;
+  }
+}
