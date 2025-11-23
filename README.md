@@ -12,7 +12,7 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 
 ### Live demo
 
-- Live Site URL: [here](https://github.com/michele-cini/time-tracking-dashboard)
+- Live Site URL: [here](https://michele-cini.github.io/time-tracking-dashboard/)
 
 ## My process
 
