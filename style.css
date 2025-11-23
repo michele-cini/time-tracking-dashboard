@@ -34,6 +34,7 @@ article {
   display: grid;
   gap: 1.5em;
   grid-template-columns: 1fr;
+  margin: 5em 0;
 }
 
 section {
@@ -91,6 +92,11 @@ section#avatar {
   justify-content: space-around;
   /* grid-area: time-frame; */
   padding: 1.25em 0;
+  color: var(--navy-200);
+}
+
+#time-frame p.selected {
+  color: white;
 }
 
 .activity {
@@ -113,70 +119,70 @@ section#avatar {
 }
 
 #Play {
-  background-color: var(--orange-300);
+  background-color: var(--blue-300);
 }
 
 #Play::after {
     content: '';
     width: 4.5em;
     aspect-ratio: 1;
-    background: url(images/icon-work.svg) no-repeat center/contain;
+    background: url(images/icon-play.svg) no-repeat center/contain;
     position: absolute;
     top: -7%;
     right: 5%;
 }
 
 #Study {
-  background-color: var(--orange-300);
+  background-color: var(--pink-400);
 }
 
 #Study::after {
     content: '';
     width: 4.5em;
     aspect-ratio: 1;
-    background: url(images/icon-work.svg) no-repeat center/contain;
+    background: url(images/icon-study.svg) no-repeat center/contain;
     position: absolute;
     top: -7%;
     right: 5%;
 }
 
 #Exercise {
-  background-color: var(--orange-300);
+  background-color: var(--green-400);
 }
 
 #Exercise::after {
     content: '';
     width: 4.5em;
     aspect-ratio: 1;
-    background: url(images/icon-work.svg) no-repeat center/contain;
+    background: url(images/icon-exercise.svg) no-repeat center/contain;
     position: absolute;
     top: -7%;
     right: 5%;
 }
 
 #Social {
-  background-color: var(--orange-300);
+  background-color: var(--purple-700);
 }
 
 #Social::after {
     content: '';
     width: 4.5em;
     aspect-ratio: 1;
-    background: url(images/icon-work.svg) no-repeat center/contain;
+    background: url(images/icon-social.svg) no-repeat center/contain;
     position: absolute;
     top: -7%;
     right: 5%;
 }
 
 #Self-Care {
-  background-color: var(--orange-300);
+  background-color: var(--yellow-300);
 }
 
 #Self-Care::after {
     content: '';
     width: 4.5em;
     aspect-ratio: 1;
-    background: url(images/icon-work.svg) no-repeat center/contain;
+    background: url(images/icon-self-care.svg) no-repeat center/contain;
     position: absolute;
     top: -7%;
     right: 5%;
@@ -209,5 +215,46 @@ section#avatar {
     background: url(images/icon-ellipsis.svg) no-repeat center/contain;
 }
 
+@media screen and (min-width: 64em) {
+  article {
+    width: calc(50rem + 20vw);
+  }
+
+  #inner-article {
+    font-size: 1.75cqi;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    'avatar work play study'
+    'avatar exercise social self-care';
+  }
+
+  #Jeremy {
+  display: flex;
+  flex-direction: column;
+}
+
+  #time-frame {
+    flex-direction: column;
+  }
+
+  #avatar {grid-area: avatar}
+
+  #Work {grid-area: work}
+
+  #Play {grid-area: play}
+
+  #Study {grid-area: study}
+
+  #Exercise {grid-area: exercise}
+
+  #Social {grid-area: social}
+
+  #Self-Care {grid-area: self-care}
+
+  .activity-data .time > div {
+    flex-direction: column;
+}
+}
 
 
